@@ -1,0 +1,9 @@
+<%-include("../partials/header")%>
+<div class="container border" id="viewFile">
+  <%table.forEach(function(line){%>
+    <p><%=line.line%></p>
+ <% })%>
+  <a href="/file/download" class="btn btn-success" id="download">Download</a>
+  <a href="/table" class="btn btn-secondary">View Tables</a>
+</div>
+<%-include("../partials/footer")%>

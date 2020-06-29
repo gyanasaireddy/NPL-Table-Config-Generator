@@ -1,0 +1,16 @@
+<%-include("../partials/header")%>
+
+<div class="container" id="selectTable">
+      <h3 class="display-4">Tables List</h3>
+      <p><small>Select a table from below</small></p>
+      <div class="list-group">
+        <%table.forEach(function(event){%>
+              <a href="/table/<%=event._id%>" class="list-group-item list-group-item-action"><%=event.tName%></a>
+        <%})%>
+      
+      <a href="/table/new" class="btn btn-primary" id="addTable">Add a Table</a>
+      <a href="/file" class="btn btn-success">Create Table</a>
+    </div>
+</div>
+
+<%-include("../partials/footer")%>

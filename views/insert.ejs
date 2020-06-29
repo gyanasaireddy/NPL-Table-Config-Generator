@@ -1,0 +1,29 @@
+<%-include("../partials/header")%>
+<div class="container border" id="insertTable">
+  <h2 class="text-center display-4">Enter <%=table.tName%> values</h2>
+  <form action="/table/<%=table._id%>/value" method="POST">
+    <!-- key -->
+    <%table.keys.name.forEach(function(event){%>
+     <h3>Keys: <%=event%></h3>
+      <div class="form-group">
+        <input type="text" class="form-control" id="tableName" name="keyValue[]">
+      </div>
+      <%})%>
+    <hr>
+    <!-- field -->
+    <%table.fields.name.forEach(function(event){%>
+      <h3>Field: <%=event%></h3>
+      <div class="form-group">
+        <input type="text" class="form-control" id="tableName" name="fieldValue[]">
+      </div>
+    <%})%>
+      <hr>
+      <button type="submit" class="btn btn-primary">Next</button>
+    <a href="/table/<%=table._id%>" class="btn btn-secondary">Show Table</a>
+    <a href="/table" class="btn btn-warning">View Tables</a>
+    
+  </form>
+</div>
+
+
+<%-include("../partials/footer")%>

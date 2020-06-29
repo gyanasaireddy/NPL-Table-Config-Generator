@@ -1,0 +1,31 @@
+body{
+  background-color:white;
+}
+.container{
+  margin-top: 10px;
+}
+#selectTable{
+  width:30%;
+  text-align: center;
+}
+#addTable{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#showTable{
+  margin-top:10px;
+  padding:10px;
+}
+#insertTable{
+  padding:10px;
+  margin-top:10px;
+}
+#viewFile{
+  padding:40px;
+  padding-top:0;
+  white-space:pre-line;
+}
+#download{
+  text-align: center;
+  margin-bottom:5px;
+}

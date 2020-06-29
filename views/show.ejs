@@ -1,0 +1,53 @@
+<%-include("../partials/header")%>
+<div class="container border" id="showTable">
+  <h2 class="text-center display-4"><%=table.tName%>_table</h2>
+  <h3>Keys</h3>
+  <!-- keys -->
+  <ul class="list-group list-group-horizontal">
+    <%table.keys.name.forEach(function(event){%>
+      <li class="list-group-item"><%=event%></li>
+    <% })%>
+  </ul>
+  <hr>
+  <h3>Key Values</h3>
+  <!-- keyvalues -->
+  <ul class="list-group ">
+  <%table.keys.value.forEach(function(event1){%>
+    <li class="list-group-item">set of values:<br>
+      <ul class="list-group list-group-horizontal" >
+      <%event1.value.forEach(function(event2){%>
+        <li class="list-group-item"><%=event2%></li>
+      <%})%>
+      </ul>
+  <%})%>
+    </ul>
+    <hr>
+    <!-- fields -->
+  <h3>Fields</h3>
+  <ul class="list-group list-group-horizontal">
+    <%table.fields.name.forEach(function(event){%>
+      <li class="list-group-item"><%=event%></li>
+    <% })%>
+  </ul>
+  <hr>
+  <!-- field values -->
+  <h3>Field Values</h3>
+  <ul class="list-group ">
+    <%table.fields.value.forEach(function(event1){%>
+      <li class="list-group-item">set of values:<br>
+        <ul class="list-group list-group-horizontal" >
+        <%event1.value.forEach(function(event2){%>
+          <li class="list-group-item"><%=event2%></li>
+        <%})%>
+        </ul>
+    <%})%>
+      </ul>
+<hr>
+  <a href="/table/<%=table._id%>/value/new" class="btn btn-primary">Add Values</a>
+  <a href="/table" class="btn btn-secondary">View Tables</a>
+  <form action="/table/<%=table._id%>?_method=DELETE" method="POST" style="display: inline;">
+    <button type="submit" class="btn btn-danger">Delete Table</button>
+ </form>
+  <a href="/file" class="btn btn-success">Create File</a>
+</div>
+<%-include("../partials/footer")%>

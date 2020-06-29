@@ -1,0 +1,36 @@
+# port_table:INDEX;keys: port_num
+lt port_table insert port_num=1 otag_enable=0src_modid=0default_vid=0x9
+lt port_table insert port_num=2 otag_enable=0src_modid=0default_vid=0x9
+
+# vlan_table:INDEX;keys: vid
+lt vlan_table insert vid=0 vlan_membership_bitmap=5stg_ptr=0x7
+lt vlan_table insert vid=1 vlan_membership_bitmap=5stg_ptr=0x7
+
+# vlan_stg_table:INDEX;keys: stg_ptr
+lt vlan_stg_table insert stg_ptr=5 stg_state=3
+
+# l2_host_table:HASH;keys: macda|vid
+lt l2_host_table insert macda=0x00000000500000vid=0x0 dst_modid=0x9dst_port=0x1mgid=0mc_pkt=0change_pri=0x0new_pri=0x0
+lt l2_host_table insert macda=0x00000000500001vid=0x0 dst_modid=0x9dst_port=0x2mgid=0mc_pkt=0change_pri=0x0new_pri=0x0
+
+# l2mc_table:INDEX;keys: mgid
+lt l2mc_table insert mgid=0x5 l2mc_bitmap=0x1e
+
+# port_table:INDEX;keys: port_num
+lt port_table insert port_num=1 otag_enable=0src_modid=0default_vid=0x9
+lt port_table insert port_num=2 otag_enable=0src_modid=0default_vid=0x9
+
+# vlan_table:INDEX;keys: vid
+lt vlan_table insert vid=0 vlan_membership_bitmap=5stg_ptr=0x7
+lt vlan_table insert vid=1 vlan_membership_bitmap=5stg_ptr=0x7
+
+# vlan_stg_table:INDEX;keys: stg_ptr
+lt vlan_stg_table insert stg_ptr=5 stg_state=3
+
+# l2_host_table:HASH;keys: macda|vid
+lt l2_host_table insert macda=0x00000000500000vid=0x0 dst_modid=0x9dst_port=0x1mgid=0mc_pkt=0change_pri=0x0new_pri=0x0
+lt l2_host_table insert macda=0x00000000500001vid=0x0 dst_modid=0x9dst_port=0x2mgid=0mc_pkt=0change_pri=0x0new_pri=0x0
+
+# l2mc_table:INDEX;keys: mgid
+lt l2mc_table insert mgid=0x5 l2mc_bitmap=0x1e
+
