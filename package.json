@@ -17,6 +17,6 @@
     "fs-extra": "^9.0.1",
     "jsonfile": "^6.0.1",
     "method-override": "^3.0.0",
-    "mongoose": "^5.9.18"
+    "mongoose": "^5.13.15"
   }
 }
